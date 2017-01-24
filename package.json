@@ -1,0 +1,32 @@
+{
+  "name": "eslint-standard",
+  "version": "0.0.1",
+  "description": "Standards for ECMAScript Projects of PALife",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --global require,window --ext .js examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PALifeH5/eslint-standard.git"
+  },
+  "keywords": [
+    "eslint",
+    "palife",
+    "h5"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PALifeH5/eslint-standard/issues"
+  },
+  "homepage": "https://github.com/PALifeH5/eslint-standard#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0"
+  }
+}
