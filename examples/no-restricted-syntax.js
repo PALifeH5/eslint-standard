@@ -1,9 +1,9 @@
 // "no-restricted-syntax": ["error"],
 
-// recommend things like 'map/every/some/filter/reduce/find/findIndex'
+// Recommend things like 'map/every/some/filter/reduce/find/findIndex'
 // to iterate over arrays
 
-// recommend thins like 'bject.keys/Object.values/Object.entries'
+// Recommend thins like 'Object.keys/Object.values/Object.entries'
 // to produce arrays from objects
 
 const array = [1, 2, 3]
