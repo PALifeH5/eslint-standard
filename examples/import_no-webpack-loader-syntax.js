@@ -1,5 +1,5 @@
-// "import/no-webpack-loader-syntax": ["off"],
+// "import/no-webpack-loader-syntax": ["error"],
 
-// Since we may use Webpack's bundle-loader frequently,
-// i.e. require('bundle!../foo'),
-// we turn this rules off.
+// You may use Webpack's loader syntax in require(),
+// e.g. require('bundle!../foo'),
+// this is not allowed.
