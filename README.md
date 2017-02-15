@@ -40,12 +40,30 @@ See `.eslintrc` file for exceptional rules.
         
     - WebStorm
     
-        Preference 
-        -> Languages & Framworks
-        -> JavaScript
-        -> Code Quality Tools
-        -> ESLint
-        -> check `Enable` and set `ESLint package` to `path/to/your/project/node_modules/eslint`.
+        Search for 'eslint', then check `Enable` and set `ESLint package` to `path/to/your/project/node_modules/eslint`.
+
+#### Git `pre-commit` Hook
+
+We recommend to use git `pre-commit` hook to run ESlint before committing.
+
+1. Install [pre-commit](https://github.com/observing/pre-commit)
+
+    ```
+    npm install --save-dev pre-commit
+    ```
+    
+2. Add ESlint scripts in your `package.json`, like below:
+
+    ```
+    "scripts": {
+        "lint": "./node_modules/.bin/eslint --global require,window --ext .js src"
+    },
+    "pre-commit": [
+        "lint"
+    ]
+    ```
+    
+3. Run `git commit` to test if `pre-commit` hook works.
 
 ### Explanations for Rules
 
