@@ -16,6 +16,10 @@ Basically we use [AirBnB's ESLint rules](https://github.com/airbnb/javascript/tr
 
 See `.eslintrc` file for exceptional rules.
 
+### Explanations for Rules
+
+Walk around `examples` folder to see explanations for each rules. We try to explain why, how to use a rule and give some correct or wrong example codes.
+
 ### Usage
 
 1. If no `package.json` in your project, add it(skip this step if already exists):
@@ -30,7 +34,30 @@ See `.eslintrc` file for exceptional rules.
     npm i babel-eslint eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react --save-dev
     ```
 
-3. Copy `.eslintrc` file to your project root directory.
+3. Copy `.eslintrc` file to your project root directory. 
+
+    **Recommended:** or put ESLint configuration in your `package.json` file under `eslintConfig`:
+
+    **package.json**
+
+    ```
+    {
+        "eslintConfig": {
+            "extends": "airbnb",
+            "installedESLint": true,
+            "parser": "babel-eslint",
+            "plugins": [
+                "react"
+            ],
+            "env": {
+                "browser": true
+            },
+            "rules": {
+                "semi": ["error", "never"]
+            }
+        }
+    }
+    ```
 
 4. Configure your editor to read `.eslintrc` file:
 
@@ -42,9 +69,9 @@ See `.eslintrc` file for exceptional rules.
     
         Search for 'eslint', then check `Enable` and set `ESLint package` to `path/to/your/project/node_modules/eslint`.
 
-#### Git `pre-commit` Hook
+### Git `pre-commit` Hook
 
-We recommend to use git `pre-commit` hook to run ESlint before committing.
+**Recommended:** use git `pre-commit` hook to run ESLint before committing.
 
 1. Install [pre-commit](https://github.com/observing/pre-commit)
 
@@ -52,19 +79,19 @@ We recommend to use git `pre-commit` hook to run ESlint before committing.
     npm install --save-dev pre-commit
     ```
     
-2. Add ESlint scripts in your `package.json`, like below:
+2. Add ESLint scripts in your `package.json`, like below:
+
+    **package.json**
 
     ```
-    "scripts": {
-        "lint": "./node_modules/.bin/eslint --global require,window --ext .js src"
-    },
-    "pre-commit": [
-        "lint"
-    ]
+    {
+        "scripts": {
+            "lint": "./node_modules/.bin/eslint --global require,window --ext .js src"
+        },
+        "pre-commit": [
+            "lint"
+        ]
+    }
     ```
     
 3. Run `git commit` to test if `pre-commit` hook works.
-
-### Explanations for Rules
-
-Walk around `examples` folder to see explanations for each rules. We try to explain why, how to use a rule and give some correct or wrong example codes.
