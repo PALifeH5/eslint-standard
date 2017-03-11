@@ -11,5 +11,5 @@ if (someReallyLongCondition.reallyLongProperty[someProperty].foobar && anotherRe
     console.log('correct')
 }
 
-// exception: urls and strings can exceeds 80
+// exception: urls, comments and strings can exceeds 80
 const url = 'https://www.SomeReallyLongDomainName.com/here/i/just/add/some/directories/to/make/its/length/longer/than/eighty'
