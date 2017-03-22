@@ -14,7 +14,7 @@
     "max-len": ["error", {"code": 80, "ignoreUrls": true, "ignoreStrings": true, "ignoreComments": true}],
     "global-require": ["off"],
     "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
-    "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
+    "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": true }],
     "strict": ["off"],
     "import/no-unresolved": ["error", { "ignore": [ "project_" ] }],
     "import/prefer-default-export": ["off"],
