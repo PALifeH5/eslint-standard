@@ -22,7 +22,7 @@ Walk around `examples` folder to see explanations for each rules. We try to expl
 
 ### Usage
 
-1. If no `package.json` in your project, add it(skip this step if already exists):
+1. If there is no `package.json` in your project, add it(skip this step if it already exists):
 
     ```
     npm init
